@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="index.css" />
 
     <style>
-      /* Add the following CSS for slide-in animation */
       @keyframes slideIn {
         from {
           opacity: 0;
@@ -28,8 +27,6 @@
           transform: translateX(0);
         }
       }
-
-      /* Apply slide-in animation to elements when scrolled into view */
       .slide-in {
         opacity: 0; /* Initially hidden */
         transition: opacity 1s ease-out, transform 1s ease-out;
@@ -42,7 +39,6 @@
     </style>
 
     <script>
-      // Function to check if an element is in the viewport
       function isElementInViewport(el) {
         const rect = el.getBoundingClientRect();
         return (
@@ -55,7 +51,6 @@
         );
       }
 
-      // Function to handle scroll events and add the active class to elements in view
       function handleScroll() {
         const elements = document.querySelectorAll(".slide-in");
         elements.forEach((element) => {
@@ -64,11 +59,8 @@
           }
         });
       }
-
-      // Add event listener for scroll events
       window.addEventListener("scroll", handleScroll);
 
-      // Initial check on page load
       document.addEventListener("DOMContentLoaded", handleScroll);
     </script>
   </head>

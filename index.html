@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="index.css" />
 
     <style>
-      /* Add the following CSS for slide-in animation */
       @keyframes slideIn {
         from {
           opacity: 0;
@@ -55,7 +54,6 @@
         );
       }
 
-      // Function to handle scroll events and add the active class to elements in view
       function handleScroll() {
         const elements = document.querySelectorAll(".slide-in");
         elements.forEach((element) => {
@@ -64,11 +62,7 @@
           }
         });
       }
-
-      // Add event listener for scroll events
       window.addEventListener("scroll", handleScroll);
-
-      // Initial check on page load
       document.addEventListener("DOMContentLoaded", handleScroll);
     </script>
   </head>
